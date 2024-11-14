@@ -30,7 +30,7 @@ def create_road_markers(image):
     # Use thresholding to define background (non-road area)
     _, background_markers = cv2.threshold(gray_image, 110, 255, cv2.THRESH_BINARY_INV)
     # background_markers = cv2.adaptiveThreshold(gray_image, 255, cv2.ADAPTIVE_THRESH_MEAN_C, cv2.THRESH_BINARY, 11, 2)
-    background_markers[background_markers == 255] =   # Mark as background (2)
+    # background_markers[background_markers == 255] =   # Mark as background (2)
     
     # Combine both foreground and background markers
     markers = foreground_markers + background_markers
